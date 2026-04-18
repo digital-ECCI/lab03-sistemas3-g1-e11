@@ -91,6 +91,7 @@ flowchart TD
     L --> M[Esperar intervalo con time.sleep()]
     M --> E
     E -- No --> N[Fin]
+...
 ```
 
 ## Código del programa
