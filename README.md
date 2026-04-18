@@ -77,18 +77,18 @@ El programa realiza las siguientes tareas:
 
 ```mermaid
 flowchart TD
-    A[Inicio] --> B[Inicializar listas, variables y tiempo inicial]
+    A[Inicio] --> B[Inicializar listas y variables]
     B --> C[Activar modo interactivo de Matplotlib]
     C --> D[Crear figura y ejes]
-    D --> E{¿La ventana sigue abierta?}
-    E -- Sí --> F[Generar temperatura simulada]
+    D --> E{Ventana abierta}
+    E -- Si --> F[Generar temperatura simulada]
     F --> G[Calcular tiempo transcurrido]
-    G --> H[Guardar tiempo y temperatura en listas]
-    H --> I[Eliminar datos antiguos si superan la duración máxima]
-    I --> J[Limpiar eje con ax.clear()]
+    G --> H[Guardar datos en listas]
+    H --> I[Eliminar datos antiguos]
+    I --> J[Limpiar eje]
     J --> K[Graficar datos actualizados]
     K --> L[Actualizar la ventana]
-    L --> M[Esperar intervalo con time.sleep()]
+    L --> M[Esperar intervalo]
     M --> E
     E -- No --> N[Fin]
 ...
